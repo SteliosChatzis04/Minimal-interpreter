@@ -1,0 +1,42 @@
+program main
+{
+    declare result, a, b;
+
+    function add(in x, in y)
+    {
+        declare s;
+        s := x + y;
+        return(s)
+    }
+
+    function factorial(in n)
+    {
+        declare f;
+        f := 1;
+        while (n > 1) {
+            f := f * n;
+            n := n - 1
+        };
+        return(f)
+    }
+
+    procedure swap(inout p, inout q)
+    {
+        declare tmp;
+        tmp := p;
+        p := q;
+        q := tmp
+    }
+
+    result := add(in 7, in 5);
+    print(result);
+
+    result := factorial(in 5);
+    print(result);
+
+    a := 10;
+    b := 20;
+    call swap(inout a, inout b);
+    print(a);
+    print(b)
+}

@@ -1,0 +1,41 @@
+program main
+{
+    declare x, sum;
+
+    /* test doublewhile */
+    x := 5;
+    doublewhile (x > 0)
+        x := x - 1
+    else
+        x := 99;
+    print(x);
+
+    /* test loop + exit */
+    sum := 0;
+    x := 1;
+    loop {
+        sum := sum + x;
+        x := x + 1;
+        if (x > 5)
+            exit
+    };
+    print(sum);
+
+    /* test forcase */
+    x := 2;
+    forcase
+        when: (x = 1): sum := 100
+        when: (x = 2): sum := 200
+        when: (x = 3): sum := 300
+        default: sum := 0;
+    print(sum);
+
+    /* test incase: multiple clauses can fire */
+    x := 5;
+    sum := 0;
+    incase
+        when: (x > 0): sum := sum + 1
+        when: (x > 3): sum := sum + 10
+        when: (x > 9): sum := sum + 100;
+    print(sum)
+}

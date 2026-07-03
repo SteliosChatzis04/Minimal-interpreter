@@ -1,0 +1,17 @@
+program main
+{
+    declare a;
+    function add(in x, inout y)
+    {
+        declare tmp;
+        tmp := x;
+        return(tmp)
+    }
+    procedure greet(in msg)
+    {
+        print(msg)
+    }
+    a := 0;
+    call greet(in a);
+    print(a)
+}

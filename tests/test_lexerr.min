@@ -1,0 +1,7 @@
+program main
+{
+    declare x;
+    abcdefghijklmnopqrstuvwxyz1234567 := 0;
+    x := 99999;
+    x := 0
+}

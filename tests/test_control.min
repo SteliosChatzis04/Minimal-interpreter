@@ -1,0 +1,26 @@
+program main
+{
+    declare x;
+    x := 0;
+    if (x = 0)
+        x := 1
+    else
+        x := 2;
+    while (x = 1)
+        x := 0;
+    doublewhile (x = 0)
+        x := 1
+    else
+        x := 2;
+    loop {
+        x := x + 1;
+        exit
+    };
+    forcase
+        when: (x = 1): x := 10
+        when: (x = 2): x := 20
+        default: x := 0;
+    incase
+        when: (x = 10): x := 1
+        when: (x = 20): x := 2
+}
